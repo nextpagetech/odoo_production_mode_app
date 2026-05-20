@@ -1,7 +1,7 @@
 Production Mode
 ===============
 
-Production Mode is an Odoo 18 addon for live databases where selected users
+Production Mode is an Odoo 19 addon for live databases where selected users
 should not access developer mode or see technical error details in the web
 client.
 

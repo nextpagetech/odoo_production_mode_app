@@ -2,7 +2,7 @@
 {
     "name": "Production Mode",
     "summary": "Restrict debug access and hide technical error details in live databases",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Tools",
     "author": "Next Page Technologies Pvt Ltd",
     "website": "https://nextpagetechnologies.com",
