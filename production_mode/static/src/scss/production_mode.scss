@@ -1,0 +1,6 @@
+.o_production_mode {
+    .debug_toggle,
+    #developer_tool {
+        display: none !important;
+    }
+}

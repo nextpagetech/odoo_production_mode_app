@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Production Mode</title>
+    <style>
+        body {
+            color: #1f2933;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.55;
+            margin: 0;
+        }
+        .pm-wrap {
+            margin: 0 auto;
+            max-width: 980px;
+            padding: 24px;
+        }
+        .pm-hero {
+            background: #102a43;
+            color: #ffffff;
+            padding: 44px 36px;
+        }
+        .pm-hero h1 {
+            font-size: 38px;
+            margin: 0 0 12px;
+        }
+        .pm-hero p {
+            font-size: 18px;
+            margin: 0;
+            max-width: 720px;
+        }
+        h2 {
+            color: #102a43;
+            font-size: 26px;
+            margin-top: 36px;
+        }
+        .pm-grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+        .pm-card {
+            border: 1px solid #d9e2ec;
+            border-radius: 8px;
+            padding: 18px;
+        }
+        .pm-card h3 {
+            color: #243b53;
+            font-size: 17px;
+            margin: 0 0 8px;
+        }
+        .pm-shot {
+            border: 1px solid #d9e2ec;
+            border-radius: 8px;
+            display: block;
+            margin: 16px 0;
+            max-width: 100%;
+        }
+        .pm-note {
+            background: #f0f4f8;
+            border-left: 4px solid #486581;
+            padding: 16px 18px;
+        }
+    </style>
+</head>
+<body>
+    <section class="pm-hero">
+        <div class="pm-wrap">
+            <h1>Production Mode</h1>
+            <p>Restrict debug access and hide technical error details for selected users in live Odoo databases.</p>
+        </div>
+    </section>
+
+    <main class="pm-wrap">
+        <h2>What It Does</h2>
+        <div class="pm-grid">
+            <div class="pm-card">
+                <h3>User Group Based</h3>
+                <p>Restrictions apply to users in the Production Mode Restricted group after the global setting is enabled.</p>
+            </div>
+            <div class="pm-card">
+                <h3>Debug Access</h3>
+                <p>Developer mode is blocked for restricted users, and debug flags are removed from their sessions.</p>
+            </div>
+            <div class="pm-card">
+                <h3>Error Display</h3>
+                <p>Unexpected technical errors are shown as a generic dialog. UserError and ValidationError messages remain visible.</p>
+            </div>
+            <div class="pm-card">
+                <h3>Database Routes</h3>
+                <p>Public database manager actions such as create, drop, backup, restore, and change password are blocked when production mode is detected.</p>
+            </div>
+        </div>
+
+        <h2>Screenshots</h2>
+        <img class="pm-shot" src="screenshot_settings.png" alt="Production Mode settings">
+        <img class="pm-shot" src="screenshot_error.png" alt="Generic error dialog">
+        <img class="pm-shot" src="screenshot_database_lock.png" alt="Database manager protection">
+
+        <h2>Configuration</h2>
+        <ol>
+            <li>Install the Production Mode module.</li>
+            <li>Open Settings and enable the Production Mode option.</li>
+            <li>Add selected users to the Production Mode Restricted group.</li>
+            <li>Log in as a restricted user and verify that debug tools are unavailable.</li>
+        </ol>
+
+        <h2>Limitations</h2>
+        <p class="pm-note">This module does not replace Odoo access rights, database backups, reverse proxy security, server monitoring, or log management. Administrators may still see technical details in server logs.</p>
+
+        <h2>Privacy</h2>
+        <p>This module does not send customer data to any external service.</p>
+    </main>
+</body>
+</html>
