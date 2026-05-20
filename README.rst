@@ -2,7 +2,8 @@ Production Mode
 ===============
 
 Production Mode is an Odoo 18 addon for live databases where selected users
-should not access developer mode or see technical tracebacks.
+should not access developer mode or see technical error details in the web
+client.
 
 Main behavior
 -------------
@@ -12,7 +13,7 @@ Main behavior
 * Blocks developer mode for restricted users when the setting is enabled.
 * Removes debug flags from restricted user sessions.
 * Hides backend developer controls for restricted users.
-* Masks unexpected technical errors with a generic administrator message.
+* Shows a generic administrator message for unexpected technical errors.
 * Keeps normal UserError and ValidationError messages visible.
 * Blocks public database manager routes when production mode is active.
 
